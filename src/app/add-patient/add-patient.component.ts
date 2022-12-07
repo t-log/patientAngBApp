@@ -16,10 +16,10 @@ export class AddPatientComponent {
   constructor(private api:ApiService){}
 
   readPatientDetails = ()=>{
-    let PatientData:any={"name":this.name,"age":this.age,"bloodGroup":this.bloodGroup,
+    let patientData:any={"name":this.name,"age":this.age,"bloodGroup":this.bloodGroup,
     "hospitalName":this.hospitalName,"appointmentDate":this.appointmentDate}
-    // console.log(PatientData)
-    this.api.addPatientDetails(PatientData).subscribe(
+    // console.log(patientData)
+    this.api.addPatientDetails(patientData).subscribe(
       (response:any)=>{
         console.log(response)
         if(response.status=="success"){
