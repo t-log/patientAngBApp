@@ -7,15 +7,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AddPatientComponent } from './add-patient/add-patient.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { ViewAllComponent } from './view-all/view-all.component';
 
 const myRoute:Routes=[{path:"",component:AddPatientComponent},
-                      {path:"add",component:AddPatientComponent},]
+                      {path:"add",component:AddPatientComponent},
+                      {path:"view",component:ViewAllComponent},]
 
 @NgModule({
   declarations: [
     AppComponent,
     AddPatientComponent,
-    NavBarComponent
+    NavBarComponent,
+    ViewAllComponent
   ],
   imports: [
     BrowserModule,
