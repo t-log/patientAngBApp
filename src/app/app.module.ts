@@ -8,17 +8,20 @@ import { AppComponent } from './app.component';
 import { AddPatientComponent } from './add-patient/add-patient.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { ViewAllComponent } from './view-all/view-all.component';
+import { SearchandDeleteComponent } from './searchand-delete/searchand-delete.component';
 
 const myRoute:Routes=[{path:"",component:AddPatientComponent},
                       {path:"add",component:AddPatientComponent},
-                      {path:"view",component:ViewAllComponent},]
+                      {path:"view",component:ViewAllComponent},
+                      {path:"search",component:SearchandDeleteComponent},]
 
 @NgModule({
   declarations: [
     AppComponent,
     AddPatientComponent,
     NavBarComponent,
-    ViewAllComponent
+    ViewAllComponent,
+    SearchandDeleteComponent
   ],
   imports: [
     BrowserModule,

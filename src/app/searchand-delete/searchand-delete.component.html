@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row g-3 mt-2">
+                <h5>Patient Search</h5>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <label for="" class="form-label">Patient Name:</label>
+                    <input type="text" class="form-control" name="name"[(ngModel)]="name" id="">
+                </div>
+                <div class="text-center col col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-12">
+                    <button (click)="readValue()" class="btn btn-primary">Search</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-3" *ngFor="let i of searchData">
+        <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+            <label for="" class="form-label">Patient Name:</label>
+            <input type="text" name="" value="{{i.name}}" id=""  class="form-control">
+        </div>
+        <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+            <label for="" class="form-label">Patient Age:</label>
+            <input type="text" name="" value="{{i.age}}" id=""  class="form-control">
+        </div>
+        <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+            <label for="" class="form-label">Blood Group:</label>
+            <input type="text" name="" value="{{i.bloodGroup}}" id=""  class="form-control">
+        </div>
+        <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+            <label for="" class="form-label">Hospital Name:</label>
+            <input type="text" name="" value="{{i.hospitalName}}" id=""  class="form-control">
+        </div>
+        <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+            <label for="" class="form-label">appointment Date</label>
+            <input type="text" name="" value="{{i.appointmentDate}}" id=""  class="form-control">
+        </div>
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <button (click)="deleteButtonClick(i.id)" class="btn btn-danger">Delete Patient</button>
+        </div>
+    </div>
+</div>
+
